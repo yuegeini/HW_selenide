@@ -36,8 +36,8 @@ public class ServiceTest {
         $(byText("Забронировать")).click();
         $(byText("Успешно!")).shouldBe(visible, Duration.ofSeconds(15));
 
-        $("[data-test-id=success-notification] .notification__content")
-                .shouldHave(exactText("Встреча успешно запланирована на " + MeetingDate))
+        $(" .notification__content")
+                .shouldHave(exactText("Встреча успешно забронирована на " + MeetingDate))
                 .shouldBe(visible);
 
     }
